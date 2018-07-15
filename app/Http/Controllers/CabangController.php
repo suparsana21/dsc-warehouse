@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ProductCategory;
-class ProductCategoryController extends Controller
+
+class CabangController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,11 +13,7 @@ class ProductCategoryController extends Controller
      */
     public function index()
     {
-        $data['datas'] = ProductCategory::with('products')->get();
-
-
-        return response()->json($data['datas']);
-        return view('product-category.index',$data);
+        //
     }
 
     /**
@@ -27,7 +23,7 @@ class ProductCategoryController extends Controller
      */
     public function create()
     {
-        return view('product-category.create');
+        //
     }
 
     /**
@@ -38,17 +34,7 @@ class ProductCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'name' => 'required|min:3'
-        ]);
-
-        $req = [
-            'name' => $request->name,
-        ];
-
-        $data = ProductCategory::create($req);
-
-        return redirect()->route('product-category.index');
+        //
     }
 
     /**
@@ -59,7 +45,7 @@ class ProductCategoryController extends Controller
      */
     public function show($id)
     {
-        
+        //
     }
 
     /**
@@ -70,9 +56,7 @@ class ProductCategoryController extends Controller
      */
     public function edit($id)
     {
-        $data['category'] = ProductCategory::find($id);
-        return view('product-category.edit',$data);
-        
+        //
     }
 
     /**
@@ -84,18 +68,7 @@ class ProductCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request,[
-            'name' => 'required|min:3'
-        ]);
-
-        $req = [
-            'name' => $request->name,
-        ];
-
-        $data = ProductCategory::where('id',$id)->update($req);
-
-        return response()->json($req);
-        // return redirect()->route('product-category.index');
+        //
     }
 
     /**
@@ -106,7 +79,6 @@ class ProductCategoryController extends Controller
      */
     public function destroy($id)
     {
-        ProductCategory::where('id',$id)->delete();
-        return response()->json($id);
+        //
     }
 }

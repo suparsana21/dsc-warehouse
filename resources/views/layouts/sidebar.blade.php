@@ -18,6 +18,18 @@
                         Product Category 
                     </a>
                 </li>
+                
+                <li class="c-sidebar__item">
+                    <a class="c-sidebar__link" href="{{route('employee.index')}}">
+                        Daftar Pegawai 
+                    </a>
+                </li>
+
+                <li class="c-sidebar__item">
+                    <a class="c-sidebar__link" href="{{route('cabang.index')}}">
+                        Cabang 
+                    </a>
+                </li>
             </ul>
 
 

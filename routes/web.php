@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::resource('product','ProductController');
 Route::resource('product-category','ProductCategoryController');
 Route::resource('stock','StockController');
+Route::resource('employee', 'EmployeeController');
+Route::resource('cabang', 'CabangController');
